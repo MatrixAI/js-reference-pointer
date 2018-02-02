@@ -1,22 +1,18 @@
-// @flow
+class Reference {
 
-class Reference<T> {
-
-  _value: T;
-
-  constructor (value: T) {
+  constructor(value) {
     this._value = value;
   }
 
-  static from (value: T) {
+  static from(value) {
     return new Reference(value);
   }
 
-  get (): T {
+  get() {
     return this._value;
   }
 
-  set (value: T): void {
+  set(value) {
     this._value = value;
   }
 
